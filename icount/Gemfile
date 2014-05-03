@@ -5,7 +5,7 @@ gem 'rails', '4.0.4'
 
 gem 'pg' 
 gem 'rails_12factor', group: :production
-
+gem 'simple_form'
 gem 'thin'
 
 # For foundation framework

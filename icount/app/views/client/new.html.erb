@@ -1,2 +1,8 @@
 <h1>Input Client Data</h1>
 <p>Add data on people in need and resources needed</p>
+
+<%= simple_form_for @client, :url => client_index_path do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.button :submit %>
+<% end %>
