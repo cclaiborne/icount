@@ -26,13 +26,18 @@
 		36692B5619158E8A004E11EB /* UGMTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36692B5519158E8A004E11EB /* UGMTabBarViewController.m */; };
 		36692B5919158EB9004E11EB /* UGMMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36692B5819158EB9004E11EB /* UGMMapViewController.m */; };
 		36692B5C19158EDD004E11EB /* UGMPersonTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36692B5B19158EDD004E11EB /* UGMPersonTableViewController.m */; };
-		36692B5F19158F3E004E11EB /* UGMReportViewcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 36692B5E19158F3E004E11EB /* UGMReportViewcontroller.m */; };
+		36692B5F19158F3E004E11EB /* UGMReportTableViewcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 36692B5E19158F3E004E11EB /* UGMReportTableViewcontroller.m */; };
 		36692B6219158FBC004E11EB /* UGMReportsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36692B6119158FBC004E11EB /* UGMReportsTableViewController.m */; };
 		36692B641915916D004E11EB /* login.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 36692B631915916D004E11EB /* login.jpg */; };
 		36692B6619159472004E11EB /* example_client.png in Resources */ = {isa = PBXBuildFile; fileRef = 36692B6519159472004E11EB /* example_client.png */; };
 		36692B6819159572004E11EB /* calendar_icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 36692B6719159572004E11EB /* calendar_icon.jpg */; };
 		36692B6A19159618004E11EB /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 36692B6919159618004E11EB /* camera.png */; };
 		36692B6C1915975B004E11EB /* van.png in Resources */ = {isa = PBXBuildFile; fileRef = 36692B6B1915975B004E11EB /* van.png */; };
+		36692B6E19159E3C004E11EB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36692B6D19159E3C004E11EB /* CoreLocation.framework */; };
+		36692B7019159E41004E11EB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36692B6F19159E41004E11EB /* MapKit.framework */; };
+		36692B7319159FAC004E11EB /* MKMapView+Zooming.m in Sources */ = {isa = PBXBuildFile; fileRef = 36692B7219159FAC004E11EB /* MKMapView+Zooming.m */; };
+		36692B771915A0C5004E11EB /* UGMAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 36692B761915A0C5004E11EB /* UGMAnnotation.m */; };
+		36692B791915A9DF004E11EB /* van_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 36692B781915A9DF004E11EB /* van_small.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,8 +78,8 @@
 		36692B5819158EB9004E11EB /* UGMMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UGMMapViewController.m; sourceTree = "<group>"; };
 		36692B5A19158EDD004E11EB /* UGMPersonTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UGMPersonTableViewController.h; sourceTree = "<group>"; };
 		36692B5B19158EDD004E11EB /* UGMPersonTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UGMPersonTableViewController.m; sourceTree = "<group>"; };
-		36692B5D19158F3E004E11EB /* UGMReportViewcontroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UGMReportViewcontroller.h; sourceTree = "<group>"; };
-		36692B5E19158F3E004E11EB /* UGMReportViewcontroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UGMReportViewcontroller.m; sourceTree = "<group>"; };
+		36692B5D19158F3E004E11EB /* UGMReportTableViewcontroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UGMReportTableViewcontroller.h; sourceTree = "<group>"; };
+		36692B5E19158F3E004E11EB /* UGMReportTableViewcontroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UGMReportTableViewcontroller.m; sourceTree = "<group>"; };
 		36692B6019158FBC004E11EB /* UGMReportsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UGMReportsTableViewController.h; sourceTree = "<group>"; };
 		36692B6119158FBC004E11EB /* UGMReportsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UGMReportsTableViewController.m; sourceTree = "<group>"; };
 		36692B631915916D004E11EB /* login.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = login.jpg; sourceTree = "<group>"; };
@@ -82,6 +87,14 @@
 		36692B6719159572004E11EB /* calendar_icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = calendar_icon.jpg; sourceTree = "<group>"; };
 		36692B6919159618004E11EB /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
 		36692B6B1915975B004E11EB /* van.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = van.png; sourceTree = "<group>"; };
+		36692B6D19159E3C004E11EB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		36692B6F19159E41004E11EB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		36692B7119159FAC004E11EB /* MKMapView+Zooming.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKMapView+Zooming.h"; sourceTree = "<group>"; };
+		36692B7219159FAC004E11EB /* MKMapView+Zooming.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKMapView+Zooming.m"; sourceTree = "<group>"; };
+		36692B741915A019004E11EB /* MapKitUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapKitUtilities.h; sourceTree = "<group>"; };
+		36692B751915A0C5004E11EB /* UGMAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UGMAnnotation.h; sourceTree = "<group>"; };
+		36692B761915A0C5004E11EB /* UGMAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UGMAnnotation.m; sourceTree = "<group>"; };
+		36692B781915A9DF004E11EB /* van_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = van_small.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +102,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36692B7019159E41004E11EB /* MapKit.framework in Frameworks */,
+				36692B6E19159E3C004E11EB /* CoreLocation.framework in Frameworks */,
 				36692B1B191571B1004E11EB /* CoreGraphics.framework in Frameworks */,
 				36692B1D191571B1004E11EB /* UIKit.framework in Frameworks */,
 				36692B19191571B1004E11EB /* Foundation.framework in Frameworks */,
@@ -130,6 +145,8 @@
 		36692B17191571B1004E11EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				36692B6F19159E41004E11EB /* MapKit.framework */,
+				36692B6D19159E3C004E11EB /* CoreLocation.framework */,
 				36692B18191571B1004E11EB /* Foundation.framework */,
 				36692B1A191571B1004E11EB /* CoreGraphics.framework */,
 				36692B1C191571B1004E11EB /* UIKit.framework */,
@@ -152,12 +169,17 @@
 				36692B5819158EB9004E11EB /* UGMMapViewController.m */,
 				36692B5A19158EDD004E11EB /* UGMPersonTableViewController.h */,
 				36692B5B19158EDD004E11EB /* UGMPersonTableViewController.m */,
-				36692B5D19158F3E004E11EB /* UGMReportViewcontroller.h */,
-				36692B5E19158F3E004E11EB /* UGMReportViewcontroller.m */,
+				36692B5D19158F3E004E11EB /* UGMReportTableViewcontroller.h */,
+				36692B5E19158F3E004E11EB /* UGMReportTableViewcontroller.m */,
 				36692B6019158FBC004E11EB /* UGMReportsTableViewController.h */,
 				36692B6119158FBC004E11EB /* UGMReportsTableViewController.m */,
 				36692B33191571B1004E11EB /* Images.xcassets */,
 				36692B1F191571B1004E11EB /* Supporting Files */,
+				36692B7119159FAC004E11EB /* MKMapView+Zooming.h */,
+				36692B7219159FAC004E11EB /* MKMapView+Zooming.m */,
+				36692B741915A019004E11EB /* MapKitUtilities.h */,
+				36692B751915A0C5004E11EB /* UGMAnnotation.h */,
+				36692B761915A0C5004E11EB /* UGMAnnotation.m */,
 			);
 			path = iCount;
 			sourceTree = "<group>";
@@ -165,6 +187,7 @@
 		36692B1F191571B1004E11EB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				36692B781915A9DF004E11EB /* van_small.png */,
 				36692B6919159618004E11EB /* camera.png */,
 				36692B6B1915975B004E11EB /* van.png */,
 				36692B6519159472004E11EB /* example_client.png */,
@@ -285,6 +308,7 @@
 				36692B2C191571B1004E11EB /* Main_iPhone.storyboard in Resources */,
 				36692B23191571B1004E11EB /* InfoPlist.strings in Resources */,
 				36692B6619159472004E11EB /* example_client.png in Resources */,
+				36692B791915A9DF004E11EB /* van_small.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,9 +327,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36692B5F19158F3E004E11EB /* UGMReportViewcontroller.m in Sources */,
+				36692B5F19158F3E004E11EB /* UGMReportTableViewcontroller.m in Sources */,
 				36692B6219158FBC004E11EB /* UGMReportsTableViewController.m in Sources */,
+				36692B771915A0C5004E11EB /* UGMAnnotation.m in Sources */,
 				36692B5C19158EDD004E11EB /* UGMPersonTableViewController.m in Sources */,
+				36692B7319159FAC004E11EB /* MKMapView+Zooming.m in Sources */,
 				36692B5619158E8A004E11EB /* UGMTabBarViewController.m in Sources */,
 				36692B5919158EB9004E11EB /* UGMMapViewController.m in Sources */,
 				36692B29191571B1004E11EB /* UGMAppDelegate.m in Sources */,
@@ -517,6 +543,7 @@
 				36692B4C191571B1004E11EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		36692B4D191571B1004E11EB /* Build configuration list for PBXNativeTarget "iCountTests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +552,7 @@
 				36692B4F191571B1004E11EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

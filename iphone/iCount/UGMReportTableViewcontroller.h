@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UGMReportViewcontroller : UIViewController
-
+@interface UGMReportTableViewcontroller : UITableViewController
+-(IBAction)dismissReport:(id)sender;
 @end

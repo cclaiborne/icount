@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 Union Gospel Mission. All rights reserved.
 //
 
-#import "UGMReportViewcontroller.h"
+#import "UGMReportTableViewcontroller.h"
 
-@interface UGMReportViewcontroller ()
+@interface UGMReportTableViewcontroller ()
 
 @end
 
-@implementation UGMReportViewcontroller
+@implementation UGMReportTableViewcontroller
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -46,4 +46,10 @@
 }
 */
 
+
+-(IBAction)dismissReport:(id)sender{
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+    }];
+}
 @end
