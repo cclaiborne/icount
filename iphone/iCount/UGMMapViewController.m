@@ -7,6 +7,8 @@
 //
 
 #import "UGMMapViewController.h"
+#import "UGMAnnotation.h"
+#import "MKMapView+Zooming.h"
 
 @interface UGMMapViewController ()
 
@@ -14,25 +16,109 @@
 
 @implementation UGMMapViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.mapView.showsUserLocation = YES;
+    self.mapView.mapType = MKMapTypeStandard;
+    self.mapView.delegate = self;
+    
+    // center on seattle
+    CLLocationDegrees lat = 47.598900;
+    CLLocationDegrees lon = -122.321692;
+    CLLocation *someLocation = [[CLLocation alloc] initWithLatitude:lat longitude:lon];
+    
+    // Create annotations
+    UGMAnnotation *annotation = [[UGMAnnotation alloc]init];
+    annotation.coordinate = someLocation.coordinate;
+    annotation.subtitle = @"Jan 2nd - I5 Bridge";
+    annotation.title = @"Josh S.";
+    [self.mapView addAnnotation:annotation];
+    
+    lat = 47.598448;
+    lon = -122.325624;
+    someLocation = [[CLLocation alloc] initWithLatitude:lat longitude:lon];
+    
+    annotation = [[UGMAnnotation alloc]init];
+    annotation.coordinate = someLocation.coordinate;
+    annotation.subtitle = @"April 3rd - Hing Hay Park";
+    annotation.title = @"Jesus J.";
+    [self.mapView addAnnotation:annotation];
+    
+    lat = 47.600988;
+    lon = -122.324615;
+    someLocation = [[CLLocation alloc] initWithLatitude:lat longitude:lon];
+    
+    annotation = [[UGMAnnotation alloc]init];
+    annotation.coordinate = someLocation.coordinate;
+    annotation.subtitle = @"June 7th - Yesler Overpass";
+    annotation.title = @"Karen A.";
+    [self.mapView addAnnotation:annotation];
+    
+    lat = 47.600648;
+    lon = -122.332962;
+    someLocation = [[CLLocation alloc] initWithLatitude:lat longitude:lon];
+
+    annotation = [[UGMAnnotation alloc]init];
+    annotation.coordinate = someLocation.coordinate;
+    annotation.subtitle = @"March 4th - Red Square";
+    annotation.title = @"Igor L. ";
+    [self.mapView addAnnotation:annotation];
+    [self.mapView zoomToFitAnnotationsAnimated:YES];
+    
 }
 
-- (void)didReceiveMemoryWarning
+- (MKAnnotationView *)mapView:(MKMapView *)mapView
+            viewForAnnotation:(id <MKAnnotation>)annotation
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    // If the annotation is the user location, just return nil.
+    if ([annotation isKindOfClass:[MKUserLocation class]]){
+        return nil;
+    }
+    
+    // Handle any custom annotations.
+    if ([annotation isKindOfClass:[UGMAnnotation class]])
+    {
+        // Try to dequeue an existing pin view first.
+        MKAnnotationView*    pinView = (MKAnnotationView*)[mapView
+                                                                 dequeueReusableAnnotationViewWithIdentifier:@"CustomPinAnnotationView"];
+        
+        if (!pinView)
+        {
+            // If an existing pin view was not available, create one.
+            pinView = [[MKAnnotationView alloc] initWithAnnotation:annotation
+                                                      reuseIdentifier:@"CustomPinAnnotationView"];
+            pinView.canShowCallout = YES;
+            UIButton *button = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+            button.frame = CGRectMake(0, 0, 23, 23);
+            pinView.rightCalloutAccessoryView = button;
+            pinView.image = [UIImage imageNamed:@"van_small"];
+            
+            //
+            UIView *leftCAV = [[UIView alloc] initWithFrame:CGRectMake(0,0,23,23)];
+            //[leftCAV addSubview : [[UIImageView alloc] initWithImage: [UIImage imageNamed:@"van"]]];
+//            [leftCAV addSubview : yourFirstLabel];
+//            [leftCAV addSubview : yourSecondLabel];
+            pinView.leftCalloutAccessoryView = leftCAV;
+
+        }
+        else{
+            pinView.annotation = annotation;
+        }
+        
+        return pinView;
+    }
+    
+    return nil;
+}
+
+-(void)calloutTapped:(MKPinAnnotationView*)pinView{
+    [self performSegueWithIdentifier:@"ShowReportSegue" sender:pinView];
+}
+
+- (void)mapView:(MKMapView *)map annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control{
+    [self performSegueWithIdentifier:@"ShowReportSegue" sender:view];
 }
 
 /*
