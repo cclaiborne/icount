@@ -23,6 +23,23 @@
 
   <body>
 
+    <p class="navbar-text pull-right">
+    <% if iuser_signed_in? %>
+      Logged in as <strong><%= current_iuser.email %></strong>.
+      <%= link_to 'Edit profile', edit_iuser_registration_path, :class => 'navbar-link' %> |
+      <%= link_to "Logout", destroy_iuser_session_path, method: :delete, :class => 'navbar-link'  %>
+    <% else %>
+      <%= link_to "Sign up", new_iuser_registration_path, :class => 'navbar-link'  %> |
+      <%= link_to "Login", new_iuser_session_path, :class => 'navbar-link'  %>
+    <% end %>
+
+    <% if notice %>
+      <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
+
     <%= yield %>
 
     
