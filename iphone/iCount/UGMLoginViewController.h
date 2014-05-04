@@ -1,5 +1,5 @@
 //
-//  UGMPersonTableViewController.h
+//  UGMLoginViewController.h
 //  iCount
 //
 //  Created by Rex St John on 5/3/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UGMPersonTableViewController : UITableViewController
--(IBAction)showNewPersonModal:(id)sender;
+@interface UGMLoginViewController : UIViewController
+-(IBAction)dismissLogin:(id)sender;
 @end

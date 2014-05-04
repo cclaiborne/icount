@@ -38,6 +38,10 @@
 		36692B7319159FAC004E11EB /* MKMapView+Zooming.m in Sources */ = {isa = PBXBuildFile; fileRef = 36692B7219159FAC004E11EB /* MKMapView+Zooming.m */; };
 		36692B771915A0C5004E11EB /* UGMAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 36692B761915A0C5004E11EB /* UGMAnnotation.m */; };
 		36692B791915A9DF004E11EB /* van_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 36692B781915A9DF004E11EB /* van_small.png */; };
+		36692B7C1915B98E004E11EB /* UGMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36692B7B1915B98E004E11EB /* UGMLoginViewController.m */; };
+		36692B7F1915BA6B004E11EB /* UGMCreatePersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36692B7E1915BA6B004E11EB /* UGMCreatePersonViewController.m */; };
+		36692B831915BB47004E11EB /* doorway.png in Resources */ = {isa = PBXBuildFile; fileRef = 36692B821915BB47004E11EB /* doorway.png */; };
+		36692B851915BE3E004E11EB /* no-image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 36692B841915BE3E004E11EB /* no-image.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +99,12 @@
 		36692B751915A0C5004E11EB /* UGMAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UGMAnnotation.h; sourceTree = "<group>"; };
 		36692B761915A0C5004E11EB /* UGMAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UGMAnnotation.m; sourceTree = "<group>"; };
 		36692B781915A9DF004E11EB /* van_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = van_small.png; sourceTree = "<group>"; };
+		36692B7A1915B98E004E11EB /* UGMLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UGMLoginViewController.h; sourceTree = "<group>"; };
+		36692B7B1915B98E004E11EB /* UGMLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UGMLoginViewController.m; sourceTree = "<group>"; };
+		36692B7D1915BA6B004E11EB /* UGMCreatePersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UGMCreatePersonViewController.h; sourceTree = "<group>"; };
+		36692B7E1915BA6B004E11EB /* UGMCreatePersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UGMCreatePersonViewController.m; sourceTree = "<group>"; };
+		36692B821915BB47004E11EB /* doorway.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doorway.png; sourceTree = "<group>"; };
+		36692B841915BE3E004E11EB /* no-image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "no-image.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +183,10 @@
 				36692B5E19158F3E004E11EB /* UGMReportTableViewcontroller.m */,
 				36692B6019158FBC004E11EB /* UGMReportsTableViewController.h */,
 				36692B6119158FBC004E11EB /* UGMReportsTableViewController.m */,
+				36692B7A1915B98E004E11EB /* UGMLoginViewController.h */,
+				36692B7B1915B98E004E11EB /* UGMLoginViewController.m */,
+				36692B7D1915BA6B004E11EB /* UGMCreatePersonViewController.h */,
+				36692B7E1915BA6B004E11EB /* UGMCreatePersonViewController.m */,
 				36692B33191571B1004E11EB /* Images.xcassets */,
 				36692B1F191571B1004E11EB /* Supporting Files */,
 				36692B7119159FAC004E11EB /* MKMapView+Zooming.h */,
@@ -187,6 +201,8 @@
 		36692B1F191571B1004E11EB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				36692B821915BB47004E11EB /* doorway.png */,
+				36692B841915BE3E004E11EB /* no-image.jpg */,
 				36692B781915A9DF004E11EB /* van_small.png */,
 				36692B6919159618004E11EB /* camera.png */,
 				36692B6B1915975B004E11EB /* van.png */,
@@ -305,8 +321,10 @@
 				36692B6A19159618004E11EB /* camera.png in Resources */,
 				36692B6C1915975B004E11EB /* van.png in Resources */,
 				36692B34191571B1004E11EB /* Images.xcassets in Resources */,
+				36692B831915BB47004E11EB /* doorway.png in Resources */,
 				36692B2C191571B1004E11EB /* Main_iPhone.storyboard in Resources */,
 				36692B23191571B1004E11EB /* InfoPlist.strings in Resources */,
+				36692B851915BE3E004E11EB /* no-image.jpg in Resources */,
 				36692B6619159472004E11EB /* example_client.png in Resources */,
 				36692B791915A9DF004E11EB /* van_small.png in Resources */,
 			);
@@ -328,6 +346,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				36692B5F19158F3E004E11EB /* UGMReportTableViewcontroller.m in Sources */,
+				36692B7F1915BA6B004E11EB /* UGMCreatePersonViewController.m in Sources */,
+				36692B7C1915B98E004E11EB /* UGMLoginViewController.m in Sources */,
 				36692B6219158FBC004E11EB /* UGMReportsTableViewController.m in Sources */,
 				36692B771915A0C5004E11EB /* UGMAnnotation.m in Sources */,
 				36692B5C19158EDD004E11EB /* UGMPersonTableViewController.m in Sources */,

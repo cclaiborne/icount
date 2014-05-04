@@ -19,6 +19,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = @"Map";
     // Do any additional setup after loading the view.
     self.mapView.showsUserLocation = YES;
     self.mapView.mapType = MKMapTypeStandard;
@@ -34,6 +35,7 @@
     annotation.coordinate = someLocation.coordinate;
     annotation.subtitle = @"Jan 2nd - I5 Bridge";
     annotation.title = @"Josh S.";
+    annotation.image = @"doorway";
     [self.mapView addAnnotation:annotation];
     
     lat = 47.598448;
@@ -44,6 +46,7 @@
     annotation.coordinate = someLocation.coordinate;
     annotation.subtitle = @"April 3rd - Hing Hay Park";
     annotation.title = @"Jesus J.";
+    annotation.image = @"van_small";
     [self.mapView addAnnotation:annotation];
     
     lat = 47.600988;
@@ -54,6 +57,7 @@
     annotation.coordinate = someLocation.coordinate;
     annotation.subtitle = @"June 7th - Yesler Overpass";
     annotation.title = @"Karen A.";
+    annotation.image = @"van_small";
     [self.mapView addAnnotation:annotation];
     
     lat = 47.600648;
@@ -64,6 +68,7 @@
     annotation.coordinate = someLocation.coordinate;
     annotation.subtitle = @"March 4th - Red Square";
     annotation.title = @"Igor L. ";
+    annotation.image = @"doorway";
     [self.mapView addAnnotation:annotation];
     [self.mapView zoomToFitAnnotationsAnimated:YES];
     
@@ -93,7 +98,9 @@
             UIButton *button = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
             button.frame = CGRectMake(0, 0, 23, 23);
             pinView.rightCalloutAccessoryView = button;
-            pinView.image = [UIImage imageNamed:@"van_small"];
+            NSString *imageValue = ((UGMAnnotation*)annotation).image;
+            UIImage *imageToUse =[UIImage imageNamed:imageValue];
+            pinView.image = imageToUse;
             
             //
             UIView *leftCAV = [[UIView alloc] initWithFrame:CGRectMake(0,0,23,23)];
