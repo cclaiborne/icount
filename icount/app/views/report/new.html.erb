@@ -3,5 +3,17 @@
 
 <%= simple_form_for [@client, @report], :url => client_report_index_path do |f| %>
   <%= f.input :location %>
+  <%= f.input :livingcondition, :collection => ['Vehicle', 'Tent', 'Ground', 'Bridge/Overpass', 'Other'] %>
+  <%= f.input :gender, :collection => ['Male', 'Female', 'Other'] %>
+  <%= f.input :ethnicity, :collection => ['White', 'Black', 'Hispanic', 'Asian', 'Native American' 'Other'] %>
+  <%= f.input :age, :collection => ['Under 18', '18-24', '25-40', '41-60', '60+', 'Unknown'] %>
+  <%= f.input :needs %>
+  <%= f.input :notes %>
   <%= f.button :submit %>
 <% end %>
+
+<!--     add_column :reports, :livingcondition, :string
+    add_column :reports, :gender, :string
+    add_column :reports, :ethnicity, :string
+    add_column :reports, :age, :string
+    add_column :reports, :needs, :string -->

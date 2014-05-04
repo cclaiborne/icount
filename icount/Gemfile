@@ -6,7 +6,6 @@ gem 'byebug'
 gem 'pg'
 gem 'rails_12factor', group: :production
 gem 'simple_form'
-gem 'thin'
 
 # For foundation framework
   gem 'compass-rails'

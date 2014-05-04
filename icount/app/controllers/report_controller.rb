@@ -8,12 +8,26 @@ class ReportController < ApplicationController
 
   def create
     @client = Client.find(params[:client_id])
-    @report = Report.new(report_params)
-    @report.save
-    redirect_to root_path
+    @report = @client.reports.new(report_params)
+    respond_to do |format|
+      if @report.save
+        #format.html { redirect_to client_report_path[@client, @report], notice: 'Report was successfully created.' }
+        format.html { redirect_to client_path(@client), notice: 'Report was successfully created.' }
+      else
+        format.html { render action: 'new' }
+      end
+    end
   end
+  # def create
+  #   @client = Client.find(params[:client_id])
+  #   @report = Report.new(report_params)
+  #   @report.save
+  #   redirect_to root_path
+  # end
 
   def index
+    @client = Client.find(params[:client_id])
+    @reports = @client.reports.all
   end
 
   def show
@@ -25,7 +39,7 @@ class ReportController < ApplicationController
   protected
 
   def report_params
-    params.permit(:location, :client_id => @client.id)
+    params.require(:report).permit(:location, :client_id, :livingcondition, :gender, :ethnicity, :age, :needs, :notes)
   end
 
 end
