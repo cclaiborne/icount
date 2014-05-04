@@ -1,4 +1,22 @@
 <h1>Client List</h1>
-<p>List of all clients should go here</p>
+<%# List of all clients should go here %>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th></th>
+    </tr>
+  </thead>
+    <tbody>
+    <% @clients.each do |client| %>
+        <tr>
+          <td><%= client.name %></td>
+          <td><%= client.description %></td>
+          <td><%= link_to 'Show', client %></td>
+        </tr>
+    <% end %>
+  </tbody>
+</table>
 
-  
+
