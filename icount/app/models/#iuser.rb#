@@ -1,0 +1,14 @@
+class Iuser < ActiveRecord::Base
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable
+
+  def master?
+    role == 'master'
+  end
+
+  def reguser?
+    role == 'reguser'
+  end
+end
