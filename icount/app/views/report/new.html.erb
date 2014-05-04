@@ -1,2 +1,7 @@
-<h1>Report#new</h1>
-<p>Find me in app/views/report/new.html.erb</p>
+<h1>Input Report Data</h1>
+<p>Add data on people in need and resources needed</p>
+
+<%= simple_form_for [@client, @report], :url => client_report_index_path do |f| %>
+  <%= f.input :location %>
+  <%= f.button :submit %>
+<% end %>

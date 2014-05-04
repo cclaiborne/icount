@@ -7,9 +7,7 @@ class ClientController < ApplicationController
   def create
     @client = Client.new(client_params)
     if @client.save
-      redirect_to main_index_path
-    else 
-      render :action => :new
+      redirect_to new_client_report_path(@client)
     end
   end
 
@@ -25,7 +23,7 @@ class ClientController < ApplicationController
   protected
   
   def client_params
-    params.require(:client).permit(:name, :description)
+    params.permit(:name, :description)
   end
 
 end
