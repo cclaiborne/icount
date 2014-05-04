@@ -6,7 +6,6 @@ class CreateReports < ActiveRecord::Migration
       t.string :resources
       t.string :services
       t.text :notes
-
       t.timestamps
     end
   end

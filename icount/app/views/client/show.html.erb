@@ -1,2 +1,45 @@
-<h1>Client#show</h1>
-<p>Find me in app/views/client/show.html.erb</p>
+
+<h2>Client Reports</h2>
+
+<p>
+  <strong>Name:</strong>
+  <%= @client.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @client.description %>
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Location</th>
+      <th>Living Condition</th>
+      <th>Gender</th>
+      <th>Ethnicity</th>
+      <th>Age</th>
+      <th>Needs</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+    <tbody>
+
+    <% @reports.each do |report| %>
+        <tr>
+          <td><%= report.location %></td>
+          <td><%= report.livingcondition %></td>
+          <td><%= report.gender %></td>
+          <td><%= report.ethnicity %></td>
+          <td><%= report.age %></td>
+          <td><%= report.needs %></td>
+          <td><%= report.notes %></td>
+        </tr>
+   <!--        <td><%= report.livingcondition %></td> -->
+          <!-- <td><%#= link_to 'Show', client %></td> -->
+    <% end %>
+  </tbody>
+</table>
+
+
+<%= link_to 'Back', client_index_path, :class => "button" %>
