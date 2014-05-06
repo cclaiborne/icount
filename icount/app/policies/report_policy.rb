@@ -20,14 +20,12 @@ class ReportPolicy < ApplicationPolicy
     end
 
     def show?
-#      iuser.master?
-      if @user.master?
-        [:location]
-      else
-        [:description, :location]
-      end
-    end
-
-     
+      iuser.master?
+#      if @user.master?
+#        [:location]
+#      else
+#        [:description, :location]
+#      end
+    end    
   end
 end

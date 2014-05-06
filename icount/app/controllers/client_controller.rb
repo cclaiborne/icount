@@ -25,7 +25,8 @@ class ClientController < ApplicationController
 
 
   def index
-    @clients = Client.all
+    @clients = policy_scope(Client)
+    #@clients = Client.all
   end
 
   def show
