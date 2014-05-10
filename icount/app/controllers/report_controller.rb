@@ -1,13 +1,14 @@
 require 'byebug'
 class ReportController < ApplicationController
+  before_filter :load_client
 
   def new
-    @client = Client.find(params[:client_id])
+    #@client = Client.find(params[:client_id])
     @report = Report.new
   end
 
   def create
-    @client = Client.find(params[:client_id])
+    #@client = Client.find(params[:client_id])
     @report = @client.reports.new(report_params)
     respond_to do |format|
       if @report.save
@@ -26,7 +27,7 @@ class ReportController < ApplicationController
   # end
 
   def index
-    @client = Client.find(params[:client_id])
+    #@client = Client.find(params[:client_id])
     @reports = @client.reports.all
   end
 
@@ -36,11 +37,26 @@ class ReportController < ApplicationController
   def update
   end
 
+  def destroy
+    @client_reports = Report.find(params[:id])
+    @client_reports.destroy
+    respond_to do |format|
+      format.html { redirect_to client_path(@client) }
+      #format.json { head :no_content }
+    end
+  end
+
   protected
 
   def report_params
     params.require(:report).permit(:location, :client_id, :livingcondition, :gender, :ethnicity, :age, :needs, :notes)
   end
+
+  def load_client
+    @client = Client.find(params[:client_id])
+  end
+
+
 
 end
 

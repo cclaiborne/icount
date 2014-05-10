@@ -36,6 +36,14 @@ class ClientController < ApplicationController
   def update
   end
 
+  def destroy
+    @client.destroy
+    respond_to do |format|
+      format.html { redirect_to client_index_path }
+      #format.json { head :no_content }
+    end
+  end
+
   private
 
   def set_client

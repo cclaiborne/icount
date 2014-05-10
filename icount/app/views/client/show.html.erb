@@ -21,6 +21,7 @@
       <th>Age</th>
       <th>Needs</th>
       <th>Notes</th>
+      <th></th>
     </tr>
   </thead>
     <tbody>
@@ -34,6 +35,8 @@
           <td><%= report.age %></td>
           <td><%= report.needs %></td>
           <td><%= report.notes %></td>
+          <td><%= link_to 'Delete', client_report_path(report.client, report), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
         </tr>
    <!--        <td><%= report.livingcondition %></td> -->
           <!-- <td><%#= link_to 'Show', client %></td> -->
@@ -42,4 +45,6 @@
 </table>
 
 
-<%= link_to 'Back', client_index_path, :class => "button" %>
+<%= link_to 'View Clients', client_index_path, :class => "button" %>
+<%= link_to 'Add New Report', new_client_report_path(@client), :class => "button" %>
+

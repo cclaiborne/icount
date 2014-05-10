@@ -6,6 +6,7 @@
       <th>Name</th>
       <th>Description</th>
       <th></th>
+      <th></th>
     </tr>
   </thead>
     <tbody>
@@ -14,9 +15,14 @@
           <td><%= client.name %></td>
           <td><%= client.description %></td>
           <td><%= link_to 'Show', client %></td>
+          <td><%= link_to 'Delete', client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
     <% end %>
   </tbody>
 </table>
+
+<div class="row">
+  <%=link_to "New Client", new_client_path, :class=>"button"%>
+</div>
 
 

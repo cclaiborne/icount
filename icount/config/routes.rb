@@ -1,6 +1,6 @@
 Icount::Application.routes.draw do
-  resources :client, :only => [:index, :show, :new, :create, :update] do
-    resources :report, :only => [:new, :create, :index, :show, :update]  
+  resources :client do
+    resources :report
   end
 
   resources :main, :only => [:index]
@@ -9,3 +9,6 @@ Icount::Application.routes.draw do
   root :to => 'main#index'
 
 end
+
+#, :only => [:index, :show, :new, :create, :update]
+#, :only => [:new, :create, :index, :show, :update]
